@@ -44,7 +44,21 @@ public interface IUserService {
 	 * Find User by id.
 	 *
 	 * @param id the user identifier
-	 * @return Optional with User, empty if user doesn't exists
+	 * @return User found
 	 */
 	User findById(Integer id);
+	
+	/**
+	 * Add a new Role to User
+	 * @param id the user identifier
+	 * @return User with the roles updated
+	 */
+	User addRoleToUser(Integer id, Integer roleId);
+	
+	/**
+	 * Remove a Role from User
+	 * @param id the user identifier
+	 * @return User with the roles updated
+	 */
+	User removeRoleFromUser(Integer id, Integer roleId);
 }
