@@ -1,17 +1,44 @@
 package com.dasetova.login_service.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.dasetova.login_service.model.Role;
 
+/**
+ * The Interface IRoleService.
+ */
 public interface IRoleService {
 
-	void createRole(Role role);
+	/**
+	 * Creates the role.
+	 *
+	 * @param role the role
+	 * @return the role created
+	 */
+	Role createRole(Role role);
 
-	void updateRole(Role role);
+	/**
+	 * Update role.
+	 *
+	 * @param role the role
+	 * @return the role updated
+	 */
+	Role updateRole(Role role);
 
+	/**
+	 * Gets all created roles.
+	 *
+	 * @return A List with all created roles
+	 */
 	List<Role> getAllRoles();
-
-	Role findById(int id);
+	
+	/**
+	 * Find by id.
+	 *
+	 * @param id the id
+	 * @return Optional with role
+	 */
+	Optional<Role> findById(final Integer id);
 
 }
