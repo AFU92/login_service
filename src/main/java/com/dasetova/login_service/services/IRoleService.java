@@ -1,7 +1,6 @@
 package com.dasetova.login_service.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.dasetova.login_service.model.Role;
 
@@ -37,8 +36,8 @@ public interface IRoleService {
 	 * Find by id.
 	 *
 	 * @param id the id
-	 * @return Optional with role
+	 * @return Role
 	 */
-	Optional<Role> findById(final Integer id);
+	Role findById(final Integer id);
 
 }

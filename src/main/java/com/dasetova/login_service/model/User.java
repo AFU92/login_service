@@ -28,7 +28,7 @@ public class User implements Serializable {
 	private int id;
 
 	@NotEmpty
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String email;
 
 	@NotEmpty
